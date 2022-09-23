@@ -15,7 +15,7 @@ description: "News!"
     <ul class="flex flex-col overflow-hidden space-y-2">
         {% for post in site.posts %}
             <li>
-            <a href="{{ post.url }}">
+            <a href="{{ site.baseurl }}{{ post.url }}">
                 <div class="w-full py-auto lg:px-4 relative rounded-lg h-32 p-2 bg-blue-900/80 hover:bg-blue-800 transition duration-250">
                     <div class="flex justify-between">
                     <h1 class="text-xl md:text-2xl lg:text-3xl py-1">{{ post.title }}</h1>
