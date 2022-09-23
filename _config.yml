@@ -1,5 +1,5 @@
-url: "https://brandonpow1.github.io/sumo-website"
-baseurl: ""
+url: "https://brandonpow1.github.io"
+baseurl: "/sumo-website"
 title: "Sumo"
 
 plugins:
