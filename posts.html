@@ -1,0 +1,30 @@
+---
+layout: default
+title: "Posts"
+description: "News!"
+---
+<!-- bg -->
+<div class="h-full w-full fixed top-0 -z-10 bg-cover blur-sm bg-blue-900">
+</div>
+<!-- center column -->
+<div class="mx-2 md:mx-4 lg:mx-16 xl:mx-32 bg-black/50">
+<div class="flex flex-row items-center mx-auto justify-center">
+    <h1 class="text-3xl md:text-3xl lg:text-4xlself-center">Posts</h1>
+</div>
+<div class="px-2 sm:px-2 md:px-4 lg:px-6 xl:px-10 py-2 min-h-screen font-caveat text-white">
+    <ul class="flex flex-col overflow-hidden space-y-2">
+        {% for post in site.posts %}
+            <li>
+            <a href="{{ post.url }}">
+                <div class="w-full py-auto lg:px-4 relative rounded-lg h-32 p-2 bg-blue-900/80 hover:bg-blue-800 transition duration-250">
+                    <div class="flex justify-between">
+                    <h1 class="text-xl md:text-2xl lg:text-3xl py-1">{{ post.title }}</h1>
+                    <p class="text-md lg:text-lg xl:text-xl">{{ post.date | date: "%-d %B %Y" }}</p>
+                    </div>
+                    <h2 class="text-md lg:text-lg xl:text-xl text-white-800">{{ post.excerpt | strip_html | truncatewords:40 }}</h2>
+                </div></a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</div>
